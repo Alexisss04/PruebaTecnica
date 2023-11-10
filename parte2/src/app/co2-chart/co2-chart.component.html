@@ -1,0 +1,21 @@
+<div>
+    <label for="country">Country:</label>
+    <select id="country" [(ngModel)]="selectedCountry" (change)="updateChart()">
+      <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="startYear">Start Year:</label>
+    <input type="number" id="startYear" [(ngModel)]="startYear" (change)="updateChart()" />
+  </div>
+  
+  <div>
+    <label for="endYear">End Year:</label>
+    <input type="number" id="endYear" [(ngModel)]="endYear" (change)="updateChart()" />
+  </div>
+  
+  <div style="max-width: 800px;">
+    <!-- Implementar la lógica para mostrar gráficos aquí -->
+  </div>
+   
